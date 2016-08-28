@@ -1,0 +1,132 @@
+@media screen and (max-width: 1050px) {
+   .story{
+	   width:90%;
+   }
+   #about .maincontent{
+	   width:55%;
+   }
+   #works ,#works .story{
+		min-height:1200px;
+		height:1200px;
+   }
+}
+
+
+@media screen and (max-width: 830px) {
+    #about .story{
+		min-height:1000px;
+	}
+    #about .maincontent{
+	   width:100%;
+	   float:none;
+	   margin-top:-25px;
+    }
+
+    #about .photo,.story .floatL{
+	  float:none!important;
+	  margin: 0 auto;
+	  
+	  
+    }
+    #about .photo{
+	   margin-top:0px;
+    }
+    #character01{
+	  left: 60%;
+	  
+    }
+	
+	
+	
+  
+}
+@media screen and (max-width: 800px) {
+	#about .story h2{
+		margin-top:0;
+	}
+	#about,#about .story{
+		height:900px;
+	}
+	#works .shape{
+		float:none;
+		margin:30px auto;
+	}
+	#works,#works .story{
+		height:2250px;
+	}
+	#timeline,#timeline .story{
+		height:1000px;
+	}
+	#works .workbox {
+		margin:40px 0px;
+	}
+	.shape{
+		width:200px;
+		height:200px;
+	}
+	
+	@keyframes fadeIn2 {
+		0% {
+			transform: scale(2.3,2.3);
+			z-index: 100;
+			opacity: 0; /*初始状态 透明度为0*/
+		}
+		50% {
+			opacity: 0; /*中间状态 透明度为0*/
+		}
+		100% {
+			transform: scale(1,1);
+			opacity: 1; /*结尾状态 透明度为1*/
+		}
+	}
+	  
+}
+@media screen and (max-width: 600px) {
+	#contact ul li input, #contact ul li textarea{
+		width:95%!important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#about,#about .story{
+		height:750px;
+	}
+	#about p.about_txt{
+		line-height:30px;
+	}
+	#about .photo{
+	   width:200px;
+	   height:200px;
+	   margin-top:150px;
+	   background-size: contain;
+	}
+	#character01{
+		display:none;
+	}
+	#works ,#works .story{
+		min-height:1650px;
+		height:1650px;
+    }
+	#works .shape .details span.heading{
+		margin-top:50px;
+	}
+	.shape .details span.heading{	
+		margin-top:70px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	 #timeline,#timeline .story{
+		height:1150px;
+	}
+}
+@media screen and (max-width: 320px) {
+	 #timeline,#timeline .story{
+		height:1300px;
+	}
+}
+@media screen and (max-width: 290px) {
+	 #timeline,#timeline .story{
+		/*height:1450px;*/
+	}
+}

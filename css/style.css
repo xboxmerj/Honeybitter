@@ -1,0 +1,574 @@
+/* v1.0 | 20080212 */
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*html5*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+
+/*----------------------------------------------------------------------------------------*/
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+	border:0;
+	cursor:pointer;
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+	line-height:1.3;
+	font-family:Microsoft JhengHei;
+}
+
+p{
+	margin: 0 0 20px 0;	
+}
+
+p, ul{
+	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+}
+
+img{
+	border: 0;
+}
+
+h1, #pixels{
+	font-family:"Museo 900", Verdana, serif;
+	font-size-adjust:0.40;
+	font-weight:700;
+	font-style:normal;
+}
+
+h2{
+	font-family:"Beau Sans Pro Book", Verdana, sans-serif;
+	font-size-adjust:0.531;
+	font-weight:500;
+	font-style:normal;
+}
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+#nav{
+	list-style: none;
+	position: fixed;
+	right:20px;
+	top:100px;
+	z-index:1000;
+	/*background:rgba(255,255,255,0.5);*/
+	border-radius:10px;
+	/*padding:5px;*/
+	
+}
+
+#nav li{
+	margin: 0 0 15px 0;	
+}
+#nav li img{
+	width:50px;
+}
+#nav li img:hover{
+	-webkit-transform: scale(1.3,1.3);
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 0.3s;
+	-moz-transform: scale(1.3,1.3);
+	-moz-transition-timing-function: ease-out;
+	-moz-transition-duration: 0.3s;
+}
+/*nav*/
+#menu{
+	width:50px;
+	height:50px;
+	
+	background:url(../images/menu_icon.png) no-repeat;	/*background:red;*/
+	position:fixed;
+	top:20px;
+	right:20px;
+	z-index:999;
+	cursor:pointer;
+}
+
+ul#nav li{
+	display:none;
+}
+
+ul#nav li a{
+	color:#fff;
+	font-size:1.4em;
+}
+ul#nav li a:hover{
+	
+}
+#header, #intro, #second{
+	width: 100%;
+}
+
+
+/*parallax scrolling*/
+.story{
+	margin: 0 auto;
+	max-width: 980px;
+	overflow: auto;
+	/*height: 1500px;*/
+}
+#about{
+	background:url(../images/bg01.png) no-repeat #23213c;
+	color: white;
+	
+	margin: 0 auto;
+	padding: 0;
+}
+
+#about .story{
+	height:700px;
+}
+
+#skills .story{
+	height: 1300px;
+}
+
+#works{
+	background:#1b1e24 100% 0 no-repeat fixed;
+	color: white;
+	margin: 0 auto;
+	padding: 0;
+}
+#works .story{
+	height:950px;
+}
+
+#timeline{
+	/*background: url(../images/trainers.png) 50% 0 no-repeat fixed;*/
+	background:#333464;
+	height: 900px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+#timeline .story{
+	height:900px;
+}
+#contact{
+	/*background: url(../images/bg01.png) 50% 0 no-repeat fixed;*/
+	background:#333464;
+	color: white;
+	height: 650px;
+	padding: 100px 0 0 0;	
+}
+#contact ul{
+	margin-top:30px;
+	max-width:500px;
+}
+#contact ul li{
+	padding:10px 0;
+
+}
+#contact ul li label{
+	width: 100px;
+    display: inline-block;
+}
+#contact ul li input ,#contact ul li textarea{
+	width:100%;
+	font-size:14px;
+	padding:5px;
+	border-radius:5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+#contact ul li textarea
+{
+	font-family: Arial;
+	resize : none;
+}
+/*common
+---------------------------------------------------*/
+.clearfix:after {content: ".";display: block;clear: both;visibility: hidden;line-height: 0;height: 0;}
+.mgb15{margin-bottom:15px;}
+.mgt15{margin-top:15px;}
+.mgt30{margin-top:30px;}
+.mgt60{margin-top:60px;}
+.floatL{float:left;}
+.floatR{float:right;}
+/*detail
+---------------------------------------------------*/
+/*button effect
+
+---------------------------------------------------*/
+/*    start code for the actual button:         */
+
+
+/*   
+    Spot is the span on the inside of the href that
+    fills the parent and makes the hover and link work
+    for the entire div
+*/
+.spot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 10px;
+  left: 58px;
+  cursor:pointer;
+}
+.svg-wrapper span{
+	position: relative;
+    top: -43px;
+    padding-top: 10px;
+    height: 30px;
+    left: 0;
+    display: block;
+    text-align: center;
+}
+/*
+    This is the outer svg wrapper that the SVG itself will 
+    fill. Multiple svg-wrapper classes can be put side by side.
+*/
+
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 150px;
+  /*make sure to use same height/width as in the html*/
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px
+}
+/*
+  This is where we define the fill, color, thickness,
+  and stroke pattern of the SVG when there is no hover.
+  The dasharray and offset together define the line position
+  under the words. Here's also where the transition speed is set.
+*/
+
+#shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #4070c1;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -220;
+  transition: 1s all ease;
+}
+/* 
+    Pushing the text up into the SVG. Without this the
+    text would be below the div's.
+*/
+
+#text {
+  margin-top: -35px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1.1em;
+}
+
+/* 
+    Changing the shape on hover. I change the color of the stroke,
+make it thinner, then set it to again wrap around the entire parent element.
+*/
+
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #06D6A0;
+}
+
+/*story
+-----------------------------------*/
+
+
+.story .floatL{
+	position: relative;
+}
+.story .floatR{
+	position: relative;
+	width:50%;
+}
+.story h2{
+	animation-duration:3s;
+	font-size: 1.4em;
+	margin-top:40px;
+	padding: 10px;
+	border-bottom:2px solid #4070c1;
+}
+
+/*about
+----------------------------------------*/
+
+#about .maincontent{
+	width:60%;
+	float:right;
+	margin-top:100px;
+}
+#about p.about_txt {
+	animation-duration:4s;
+	line-height:40px;
+	position:relative;
+	top:20px;
+	padding:15px 20px;
+	background:rgba(255, 255, 255, 0.3);
+}
+
+#about .photo{
+	width:300px;
+	height:300px;
+	background:#000;
+	border:5px solid #fff;
+	border-radius:99em;
+	position:relative;
+	top:-50px;
+	background:url(../images/photo.jpg) no-repeat;
+}
+
+
+.fadein{
+	animation-name:fadeIn;
+	animation-duration:2s;
+	animation-interation-count:1;
+	animation-delay:0s;	
+}
+.fadein2{
+	animation-name:fadeIn2;
+	animation-duration:3s;
+	animation-interation-count:1;
+	animation-delay:-1s;	
+}
+.skewshow .overlay{
+	background:red;
+	animation-name:skew01;
+	animation-duration:2s;
+	animation-interation-count:1;
+	animation-delay:0s;
+}
+
+#character01{
+	animation:chaAction01 2s 3s forwards ,chaAction02 1.5s 6s forwards 3;
+	opacity:0;
+	width:124px;
+	height:200px;
+	background:url(../images/character/cha01.png) no-repeat;
+	/*-moz-animation:chaAction01 3s forwards ;
+	-webkit-animation:chaAction01 2s forwards ;
+	-moz-animation:chaAction01 2s forwards;*/
+	/*animation-delay:3s;*/
+	position:relative;
+	z-index:99;
+	left:220px;
+	
+	
+}
+/*skills
+----------------------------------------*/
+.story h1{
+	background:#207d71;
+	border-radius:5px;
+	padding:5px 10px;
+	color:#fff;
+	width:150px;
+	text-align:center;
+	font-size:1.8em;
+	margin-top:50px;
+}
+
+#skills{
+	background:url(../images/firstBG.jpg) no-repeat #333464 100% 0;
+	color: white;
+	margin: 0 auto;
+	padding: 0;
+}
+
+
+#skills ul.skillname{
+	border-right:1px solid #ccc;
+	padding-right:20px;
+	
+}
+#skills ul.skillname li{
+	/*text-align:right;*/
+}
+#skills ul li{
+	line-height:40px;
+	
+}
+#skills ul.starmark{
+	margin-left:30px;
+}
+
+
+/*works*/
+#works .workbox{
+	margin:40px;
+}
+#works .shape{
+	float:left;
+	margin-bottom:10px;
+}
+
+/*timeline
+-----------------------------*/
+#dot01,#dot02,#dot03,#dot04,#dot05{
+	animation-name:fadeIn3;
+	animation-duration:0.3s;
+	animation-iteration-count:2;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+#tlabel01,#tlabel02,#tlabel03,#tlabel04{
+	animation-name:fadeIn;
+	animation-duration:1s;
+	animation-interation-count:1;
+	animation-fill-mode:forwards;
+	opacity:0;
+}
+#dot01,#tlabel01{
+	animation-delay:0s;
+}
+#dot02,#tlabel02{
+	animation-delay:2s;
+}
+#dot03,#tlabel03{
+	animation-delay:4s;
+}
+#dot04,#tlabel04{
+	animation-delay:6s;
+}
+#dot05{
+	animation-delay:8s;
+}
+/*--animation
+--*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0; /*中间状态 透明度为0*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+
+@keyframes fadeIn2 {
+    0% {
+		transform: scale(3,3);
+		z-index: 100;
+		opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0; /*中间状态 透明度为0*/
+    }
+    100% {
+		transform: scale(1,1);
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+@keyframes fadeIn3{
+    from{
+		transform: scale(0.1,0.1);
+		opacity: 0; /*初始状态 透明度为0*/
+
+    }
+	
+    to{
+		transform: scale(1,1);
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+
+}
+/*chaAction01
+-------------------------------------------------------------------------------------*/
+@keyframes chaAction01{
+	0% {top:0px;background:url(../images/character/cha01.png) no-repeat;}
+	15%{opacity:1;}
+	100%{top:310px;background:url(../images/character/cha01.png) no-repeat;opacity:1; }
+}
+
+
+@-moz-keyframes chaAction01{
+	0% {top:0px;background:url(../images/character/cha01.png) no-repeat;}
+	15%{opacity:1;}
+	100%{top:310px;background:url(../images/character/cha01.png) no-repeat;opacity:1;}
+}
+
+
+/*--------------------------------------*/
+@keyframes chaAction02{
+	0%{background:url(../images/character/cha01.png) no-repeat;opacity:1;}
+	50%{background:url(../images/character/cha02.png) no-repeat;opacity:1;}
+	100%{background:url(../images/character/cha03.png) no-repeat;opacity:1;}
+}
+
+@-moz-keyframes chaAction02{
+	0%{background:url(../images/character/cha01.png) no-repeat;opacity:1;}
+	50%{background:url(../images/character/cha02.png) no-repeat;opacity:1;}
+	100%{background:url(../images/character/cha03.png) no-repeat;opacity:1;}
+}
+
+/*photo-shape showup animation*/
+	
